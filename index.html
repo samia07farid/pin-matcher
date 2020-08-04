@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input class="form-control" type="text" id="generate-pin">
+                    <input class="form-control" type="text" id="pin-generated">
                     <button class="generate-btn" onclick="generatePin()">Generate Pin</button>
                 </div>
             </div>
@@ -60,7 +60,7 @@
         document.getElementById('match').style.display = "none";
         
         function generatePin(){
-            let pinNum = document.getElementById('generate-pin');
+            let pinNum = document.getElementById('pin-generated');
             let pinRandom = Math.random(pinNum.value)*10000;
             let pinRandomNum = Math.round(pinRandom);
             if(pinRandomNum < 1000){
@@ -78,7 +78,7 @@
         }
 
         function pinMatcher(){
-            let generatedPin = document.getElementById('generate-pin').value;
+            let generatedPin = document.getElementById('pin-generated').value;
             let userPin = document.getElementById('text-area').value;
             if(userPin > 10000 || userPin < 1000){
                 alert('Please ! Enter a four digit pin')
