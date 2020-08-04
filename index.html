@@ -81,10 +81,10 @@
             let generatedPin = document.getElementById('generate-pin').value;
             let userPin = document.getElementById('text-area').value;
             if(userPin > 10000 || userPin < 1000){
-                alert('Please! Enter a four digit pin')
+                alert('Please ! Enter a four digit pin')
             }
             else if(generatedPin == ""){
-                alert('Please! Press the generate pin button first')
+                alert('Please ! Press the generate pin button first')
             }
             else if(userPin == generatedPin){
                 document.getElementById('match').style.display = "block";
